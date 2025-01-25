@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="Style.css"> <!-- Link to your custom stylesheet -->
+</head>
+<body>
+    <h1>Mortgage Calculator</h1>
+    <div>
+        <label>Home Price</label><br>
+        <input id="homePrice">
+    </div>
+    <div>
+        <label>% Down</label><br>
+        <input id="percentDown">
+    </div>
+    <div>
+        <label>% Interest Rate</label><br>
+        <input id="annualInterestrate">
+    </div>
+    <div>
+        <label>Loan Term (Years)</label><br>
+        <input id="loantermYears">
+    </div>
+    <div>
+        <label>% Property Tax Rate</label><br>
+        <input id="propertyTaxRate">
+    </div>
+    <div>
+        <label>Other Expenses (HMO, Insurance)</label><br>
+        <input id="other">
+    </div>
+    <!-- <div>
+        <label>Sellers Credits</label><br>
+        <input id="sellersCredits">
+    </div> -->
+    <div>
+        <label>Available Monthly Funds</label><br>
+        <input id="availableMonthlyFunds">
+    </div><br><br>
+    
+    <button id="calculate" class="skull-button">
+        <i class="fa-sharp fa-solid fa-skull-crossbones"></i>
+    </button>
+
+    <br><br><br>
+    <table id="resultsTable" class="display nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th>Home Price</th>
+                <th>Loan Amount</th>
+                <th>Down Payment</th>
+                <!-- <th>Available Points</th>
+                <th>Points Funds Remaining</th> -->
+                <th>Monthly Property Tax</th>
+                <th>PMI</th>
+                <th>Monthly Payment</th>
+                <th>Remaining Monthly Funds</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

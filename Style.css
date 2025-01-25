@@ -1,0 +1,118 @@
+/* General Body Styling */
+body {
+    font-family: 'Source Code Pro', monospace; /* Use a monospaced font */
+    font-size: 1em;
+    background-color: #000000; /* Dark background for the whole page */
+    color: #00ff00; /* Light gray text color for contrast */
+    margin: 0;
+    padding: 0 20px; 
+}
+
+/* Container for the table */
+#resultsTable {
+    width: 100%;
+    margin: 20px auto; /* Margin for spacing */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide any overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    background-color: #1e1e1e; /* Dark background for the table */
+}
+
+.skull-button {
+    background-color: #333; /* Dark background for the button */
+    color: #e0e0e0; /* Light text color */
+    border: 2px solid #00ff00; /* Green border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px 24px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+    font-family: 'Verdana', sans-serif; /* Font family */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center the icon and text vertically */
+    justify-content: center; /* Center the text horizontally */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Table styling */
+.dataTables_wrapper table.dataTable {
+    border-collapse: collapse; /* Collapse borders for better look */
+    width: 100%;
+}
+
+/* Header Styling */
+.dataTables_wrapper table.dataTable thead th {
+    background-color: #333; /* Dark gray background for header */
+    color: #00ff00; /* Green text color for the header */
+    font-weight: bold; /* Bold text */
+    padding: 12px; /* Padding for spacing */
+    text-align: left; /* Align text to the left */
+    border-bottom: 2px solid #00b300; /* Green bottom border */
+}
+
+/* Cell Styling */
+.dataTables_wrapper table.dataTable tbody td {
+    padding: 12px; /* Padding for cells */
+    border-bottom: 1px solid #444; /* Slightly lighter border for cells */
+    color: #00ff00; /* Green text color for cells */
+}
+
+/* Alternate row coloring for better readability */
+.dataTables_wrapper table.dataTable tbody tr:nth-child(even) {
+    background-color: #2c2c2c; /* Slightly lighter dark gray for alternate rows */
+}
+
+/* Hover effect on rows */
+.dataTables_wrapper table.dataTable tbody tr:hover {
+    background-color: #3a3a3a; /* Slightly lighter gray on hover */
+}
+
+/* Scroll and responsive styling */
+.dataTables_wrapper .dataTables_scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.dataTables_wrapper .dataTables_scrollHead {
+    overflow: hidden;
+    background: #1e1e1e; /* Same as the table background */
+}
+
+/* Optional: Styling for DataTable pagination and search inputs */
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 20px; /* Margin for pagination controls */
+    text-align: right; /* Align pagination controls to the right */
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #333; /* Dark border for the search input */
+    border-radius: 4px; /* Rounded corners for the input */
+    padding: 6px; /* Padding inside the input */
+    font-size: 0.9em; /* Slightly smaller font size */
+    background-color: #2c2c2c; /* Dark background for input */
+    color: #00ff00; /* Green text color for input */
+}
+
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid #333; /* Dark border for the select dropdown */
+    border-radius: 4px; /* Rounded corners for the dropdown */
+    padding: 6px; /* Padding inside the dropdown */
+    font-size: 0.9em; /* Slightly smaller font size */
+    background-color: #2c2c2c; /* Dark background for dropdown */
+    color: #00ff00; /* Green text color for dropdown */
+}
+
+input, textarea {
+    background-color: #333; /* Dark background color */
+    color: #e0e0e0; /* Light text color */
+    border: 1px solid #555; /* Dark border color */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding inside the input fields */
+    width: 200px; /* Full width minus padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Focus state styling for better user experience */
+input:focus, textarea:focus {
+    border-color: #00ff00; /* Highlight border color on focus */
+    outline: none; /* Remove default outline */
+}

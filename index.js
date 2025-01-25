@@ -5,8 +5,6 @@ $(document).ready(function() {
             { title: "Home Price" },
             { title: "Loan Amount"},
             { title: "Down Payment" },
-            // { title: "Available Points" },
-            // { title: "Points Funds Remaining" },
             { title: "Monthly Property Tax" },
             { title: "PMI" },
             { title: "Monthly Payment" },
@@ -18,7 +16,8 @@ $(document).ready(function() {
     };
     
     const table = $('#resultsTable').DataTable(tableConfig);
-
+    
+    //Not currently used
     function calculateElegablePionts(homePrice, sellersCredits){
         let costPerPoint = homePrice * 0.01;
         let elegablePoints = Math.trunc(sellersCredits / costPerPoint);
@@ -39,18 +38,13 @@ $(document).ready(function() {
         let loantermYears = parseFloat(document.getElementById("loantermYears").value);
         let propertyTaxRate = parseFloat(document.getElementById("propertyTaxRate").value) / 100;
         let other = parseFloat(document.getElementById("other").value);
-        // let sellersCredits = parseFloat(document.getElementById("sellersCredits").value);
         let availableMonthlyFunds = parseFloat(document.getElementById("availableMonthlyFunds").value);
-        
-        // const buydown = calculateElegablePionts(homePrice, sellersCredits);
         
         // Calculate monthly interest rate and total number of payments
         let interestrate = annualInterestrate / 12;
         let loanterm = loantermYears * 12;
         let loanamount = homePrice - (homePrice * percentDown);
         let monthlyPropertyTax = homePrice * (propertyTaxRate / 12);
-        // let elegablePoints = buydown.elegablePoints;
-        // let remainingFunds = buydown.remainingFunds;
         let pmi = percentDown <.2 ? calculatePMI(loanamount, 0.00308) : 0;
         let monthlypayment;
         if (interestrate === 0) {
@@ -67,8 +61,6 @@ $(document).ready(function() {
             homePrice.toFixed(2),
             loanamount.toFixed(2),
             (homePrice * percentDown).toFixed(2),
-            // elegablePoints,
-            // remainingFunds.toFixed(2),
             monthlyPropertyTax.toFixed(2),
             pmi.toFixed(2),
             (monthlypayment + monthlyPropertyTax + other + pmi).toFixed(2), 
